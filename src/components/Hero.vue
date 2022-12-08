@@ -12,7 +12,7 @@ import Navbar from "../components/Navbar.vue";
                 <button class="main_button">Create your book</button>
             </div>
 
-            <img src="hero-img.png" alt="hero image" />
+            <img src="/hero-img.png" alt="hero image" />
         </div>
     </div>
 </template>
