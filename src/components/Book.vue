@@ -25,11 +25,12 @@
                 </div>
             </div>
         </div>
+
         <swiper class="mySwiper">
             <swiper-slide v-for="i in 8" :key="i">
                 <img :src="`/book/page${i}.png`" :alt="`page ${i}`" />
             </swiper-slide>
-            <p>Drag to read</p>
+            <p class="drag">Drag to read</p>
         </swiper>
     </div>
 </template>
@@ -63,6 +64,7 @@ export default {
     gap: 2rem;
     height: min-content;
     align-items: center;
+    position: relative;
 
     h3 {
         grid-area: title;
@@ -70,12 +72,15 @@ export default {
 
     .book_left {
         grid-area: before;
+
         .aside_container {
-            background: var(--light);
+            background: white;
             padding: 2rem;
             border-radius: 15px;
             width: auto;
             height: max-content;
+            box-shadow: 8px 8px var(--primary-purple);
+            border: 2px solid var(--primary-purple);
 
             .small_title {
                 font-family: var(--font1);
@@ -115,6 +120,18 @@ export default {
         }
     }
 
+    // .book_right {
+    //     position: relative;
+
+    //     p.drag {
+    //         position: absolute;
+    //         left: 50%;
+    //         bottom: 50%;
+    //         transform: translateX(-50%) translateY(-50%);
+    //         z-index: 999;
+    //     }
+    // }
+
     .swiper {
         grid-area: book;
         // width: 100%;
@@ -123,14 +140,20 @@ export default {
         border-radius: 10px;
         margin: 0;
         cursor: grab;
+        position: relative;
 
-        p {
-            padding: 5px 15px;
+        .drag {
+            position: absolute;
+            z-index: 999;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            margin: 0;
             color: white;
-            font-weight: 700;
-            background: var(--primary-purple);
+            background: var(--secondary-purple);
+            padding: 5px 20px;
             border-radius: 10px;
-            text-align: center;
+            opacity: 0.75;
         }
     }
     .swiper-slide {
