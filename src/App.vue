@@ -5,17 +5,15 @@ import Footer from "./components/Footer.vue";
 import Hero from "./components/Hero.vue";
 // import Navbar from "./components/Navbar.vue";
 import Pricing from "./components/Pricing.vue";
-import Test from "./components/Test.vue";
 </script>
 
 <template>
     <div id="app">
-        <!-- <hero /> -->
+        <hero />
         <Book />
-        <!-- <HowItWorks /> -->
-        <!-- <Pricing /> -->
-        <!-- <test /> -->
-        <!-- <Footer /> -->
+        <HowItWorks />
+        <Pricing />
+        <Footer />
     </div>
 </template>
 

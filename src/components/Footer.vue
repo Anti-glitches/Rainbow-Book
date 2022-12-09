@@ -83,7 +83,7 @@
 
 @media (max-width: 768px) {
     #footer_section {
-        background: aliceblue;
+        // background: aliceblue;
 
         .content {
             display: flex;

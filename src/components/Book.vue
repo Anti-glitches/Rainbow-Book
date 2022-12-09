@@ -1,8 +1,7 @@
 <template>
     <div id="book_section">
+        <h3>Read Maryam’s book</h3>
         <div class="book_left">
-            <!-- <h3>Read Maryam’s book</h3> -->
-
             <div class="aside_container">
                 <p class="small_title">What was inputted</p>
 
@@ -57,9 +56,18 @@ export default {
 #book_section {
     display: grid;
     grid-template-columns: 1fr 2fr;
+    grid-template-areas:
+        "title title"
+        "before book";
     gap: 2rem;
+    height: min-content;
+
+    h3 {
+        grid-area: title;
+    }
 
     .book_left {
+        grid-area: before;
         .aside_container {
             background: var(--light);
             padding: 2rem;
@@ -90,6 +98,11 @@ export default {
                 align-items: center;
                 gap: 20px;
 
+                p {
+                    font-family: var(--font1);
+                    font-size: 1.5rem;
+                }
+
                 img {
                     width: 100px;
                     height: 100%;
@@ -98,58 +111,65 @@ export default {
             }
         }
     }
+
+    .swiper {
+        grid-area: book;
+        // width: 100%;
+        height: fit-content;
+        width: auto;
+        border-radius: 10px;
+        margin: 0;
+    }
+    .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+    }
+
+    .swiper-slide img {
+        display: block;
+        // width: 100vw;
+        // height: auto;
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
     #book_section {
         display: flex;
         flex-direction: column;
+
+        h3 {
+            text-align: center;
+        }
 
         .book_left {
             .aside_container {
                 .footer {
                     img {
                         transform: rotate(90deg);
+                        width: 60px;
+                        height: fit-content;
                     }
                 }
             }
         }
     }
-}
-
-.swiper {
-    // width: 100%;
-    // height: 100%;
-    width: auto;
-    border-radius: 15px;
-    margin: 0;
-}
-.swiper-slide {
-    text-align: center;
-    font-size: 18px;
-    background: #fff;
-
-    /* Center slide text vertically */
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    -webkit-justify-content: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    -webkit-align-items: center;
-    align-items: center;
-}
-
-.swiper-slide img {
-    display: block;
-    // width: 100vw;
-    // height: auto;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
 }
 </style>

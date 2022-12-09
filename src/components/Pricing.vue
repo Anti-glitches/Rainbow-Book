@@ -1,5 +1,10 @@
 <template>
-    <div class="cards_container">
+    <div id="pricing_section">
+        <div class="title">
+            <h2>It’s easy</h2>
+            <h4>to create your own book</h4>
+        </div>
+
         <div class="card why_info">
             <h4>Create memorable moments</h4>
             <p>
@@ -25,10 +30,24 @@
 
             <p class="small_title">What you'll get:</p>
             <ul>
-                <li>Lorem ipsum dolor sit amet consectetur.</li>
-                <li>Lorem ipsum dolor sit amet consectetur.</li>
-                <li>Lorem ipsum dolor sit amet consectetur.</li>
-                <li>Lorem ipsum dolor sit amet consectetur.</li>
+                <li>
+                    <i class="fa-solid fa-square-check"></i>
+                    <span>An amazing e-book illustrated using AI</span>
+                </li>
+                <li>
+                    <i class="fa-solid fa-square-check"></i>
+                    <span
+                        >Printable at Stables, Kinkos or a print shop near you
+                    </span>
+                </li>
+                <li>
+                    <i class="fa-solid fa-square-check"></i>
+                    <span>Lorem ipsum dolor sit amet consectetur</span>
+                </li>
+                <li>
+                    <i class="fa-solid fa-square-check"></i>
+                    <span>Lorem ipsum dolor sit amet consectetur</span>
+                </li>
             </ul>
 
             <div class="pricing_footer">
@@ -48,10 +67,24 @@
 
             <p class="small_title">What you'll get:</p>
             <ul>
-                <li>Lorem ipsum dolor sit amet consectetur.</li>
-                <li>Lorem ipsum dolor sit amet consectetur.</li>
-                <li>Lorem ipsum dolor sit amet consectetur.</li>
-                <li>Lorem ipsum dolor sit amet consectetur.</li>
+                <li>
+                    <i class="fa-solid fa-square-check"></i>
+                    <span
+                        >An amazing physical book you can read at bedtime!
+                    </span>
+                </li>
+                <li>
+                    <i class="fa-solid fa-square-check"></i>
+                    <span>Lorem ipsum dolor sit amet consectetur</span>
+                </li>
+                <li>
+                    <i class="fa-solid fa-square-check"></i>
+                    <span>Lorem ipsum dolor sit amet consectetur</span>
+                </li>
+                <li>
+                    <i class="fa-solid fa-square-check"></i>
+                    <span>Lorem ipsum dolor sit amet consectetur</span>
+                </li>
             </ul>
 
             <div class="pricing_footer">
@@ -63,10 +96,19 @@
 </template>
 
 <style lang="scss" scoped>
-.cards_container {
+#pricing_section {
     display: grid;
+    grid-template-areas:
+        "info title title"
+        "info digital physical";
+    gap: 2rem;
+
     grid-template-columns: 1fr 1fr 1fr;
-    column-gap: 40px;
+
+    .title {
+        margin-bottom: 2rem;
+        grid-area: title;
+    }
 
     .card {
         border-radius: 25px;
@@ -78,8 +120,7 @@
     }
 
     .card_pricing {
-        height: fit-content;
-
+        height: auto;
         .pricing_title {
             display: flex;
             justify-content: space-between;
@@ -96,9 +137,23 @@
         }
 
         ul {
+            list-style: none;
+            padding: 0;
+
             li {
                 font-family: var(--font2);
                 font-size: 18px;
+
+                display: grid;
+                grid-template-columns: min-content 1fr;
+                gap: 10px;
+                margin: 5px 0;
+
+                i {
+                    font-size: 1.5rem;
+                    margin-top: 2px;
+                    color: #1ea896;
+                }
             }
         }
 
@@ -122,6 +177,7 @@
     .pricing_physical {
         background: var(--primary-purple);
         color: white;
+        grid-area: physical;
 
         a {
             color: white;
@@ -131,10 +187,18 @@
             background: var(--light);
             color: black;
         }
+        ul {
+            li {
+                i {
+                    color: var(--light);
+                }
+            }
+        }
     }
 
     .pricing_digital {
         background: var(--light);
+        grid-area: digital;
     }
 
     .why_info {
@@ -142,6 +206,7 @@
         color: white;
         display: flex;
         flex-direction: column;
+        grid-area: info;
 
         img {
             margin-top: 3rem;
@@ -151,8 +216,9 @@
 }
 
 @media (max-width: 1200px) {
-    .cards_container {
+    #pricing_section {
         grid-template-areas:
+            "title title"
             "info info"
             "digital physical";
         grid-template-columns: 1fr 1fr;
@@ -178,7 +244,7 @@
 }
 
 @media (max-width: 768px) {
-    .cards_container {
+    #pricing_section {
         display: flex;
         flex-direction: column;
         row-gap: 2rem;
