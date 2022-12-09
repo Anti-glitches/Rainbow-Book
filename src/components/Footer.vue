@@ -1,11 +1,11 @@
 <template>
-    <footer>
+    <footer id="footer_section">
         <div class="content">
             <div class="content-body">
                 <h4>Join our newsletter</h4>
                 <p>
-                    Promotions, new products and exclusive offers. <br />
-                    Directly to your inbox.
+                    Promotions, new products and exclusive offers. Directly to
+                    your inbox.
                 </p>
             </div>
             <div class="inputText">
@@ -50,34 +50,15 @@
             padding: 20px;
             padding-right: 150px;
             background: var(--light);
-            border-radius: 20px;
+            border-radius: 15px;
             width: 200px;
         }
-
-        // .main_button {
-        //     background: var(--primary-purple);
-        //     border: none;
-        //     color: white;
-        //     padding: 15px 50px;
-        //     border-radius: 15px;
-        //     font-weight: 600;
-        //     letter-spacing: 2px;
-        //     cursor: pointer;
-        // }
 
         button {
             position: absolute;
             top: 50%;
             right: 5px;
             transform: translate(0, -50%);
-            // background: var(--primary-purple);
-            // border: none;
-            // color: white;
-            // padding: 15px 50px;
-            // border-radius: 15px;
-            // font-weight: 600;
-            // letter-spacing: 2px;
-            // cursor: pointer;
         }
     }
 }
@@ -96,6 +77,34 @@
 
         :first-child {
             margin-right: 20px;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    #footer_section {
+        background: aliceblue;
+
+        .content {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .footer_bottom {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            img {
+                margin-bottom: 2rem;
+                height: 100%;
+                width: min-content;
+            }
+
+            .footer_links {
+                text-align: center;
+            }
         }
     }
 }

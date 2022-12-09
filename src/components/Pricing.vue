@@ -149,4 +149,43 @@
         }
     }
 }
+
+@media (max-width: 1200px) {
+    .cards_container {
+        grid-template-areas:
+            "info info"
+            "digital physical";
+        grid-template-columns: 1fr 1fr;
+        column-gap: 2rem;
+        row-gap: 2rem;
+
+        .card {
+            max-width: none;
+        }
+
+        .why_info {
+            grid-area: info;
+        }
+
+        .pricing_digital {
+            grid-area: digital;
+        }
+
+        .pricing_physical {
+            grid-area: physical;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .cards_container {
+        display: flex;
+        flex-direction: column;
+        row-gap: 2rem;
+
+        .card {
+            max-width: 100%;
+        }
+    }
+}
 </style>

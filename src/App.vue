@@ -5,15 +5,17 @@ import Footer from "./components/Footer.vue";
 import Hero from "./components/Hero.vue";
 // import Navbar from "./components/Navbar.vue";
 import Pricing from "./components/Pricing.vue";
+import Test from "./components/Test.vue";
 </script>
 
 <template>
     <div id="app">
-        <hero />
+        <!-- <hero /> -->
         <Book />
-        <HowItWorks />
-        <Pricing />
-        <Footer />
+        <!-- <HowItWorks /> -->
+        <!-- <Pricing /> -->
+        <!-- <test /> -->
+        <!-- <Footer /> -->
     </div>
 </template>
 
@@ -22,5 +24,7 @@ import Pricing from "./components/Pricing.vue";
     display: flex;
     flex-direction: column;
     gap: 200px;
+    max-width: 1400px;
+    margin: 0 auto;
 }
 </style>

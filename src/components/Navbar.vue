@@ -4,7 +4,7 @@
 
         <div class="nav_links">
             <ul>
-                <li><a href="#">About</a></li>
+                <!-- <li><a href="#">About</a></li> -->
                 <li><a href="#">Pricing</a></li>
                 <li><a href="#">How it works?</a></li>
             </ul>
@@ -35,6 +35,15 @@ nav {
             gap: 25px;
 
             margin-right: 25px;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    nav {
+        justify-content: center;
+        .nav_links {
+            display: none;
         }
     }
 }

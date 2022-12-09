@@ -2,16 +2,43 @@
     <div id="how_section">
         <h2>How it works</h2>
         <div class="container_body">
-            <div class="content_container" v-for="i in 4" :key="i">
+            <div class="content_container">
                 <div class="content_body">
-                    <span class="number_styling">{{ i }}</span>
+                    <span class="number_styling">1</span>
                     <h3>Answer a few questions</h3>
                     <p>
                         Guiding your child along a few question to help them
                         build their stories
                     </p>
                 </div>
-                <img :src="`/how/how${i}.png`" alt="image" />
+                <img src="/how/how1.png" alt="image" />
+            </div>
+            <div class="content_container">
+                <div class="content_body">
+                    <span class="number_styling">2</span>
+                    <h3>AI generated page</h3>
+                    <p>Our AI generates illustrations for each page</p>
+                </div>
+                <img src="/how/how2.png" alt="image" />
+            </div>
+            <div class="content_container">
+                <div class="content_body">
+                    <span class="number_styling">3</span>
+                    <h3>Pick the best illustration</h3>
+                    <p>
+                        You and your child pick your favourite illustrations for
+                        each page
+                    </p>
+                </div>
+                <img src="/how/how3.png" alt="image" />
+            </div>
+            <div class="content_container">
+                <div class="content_body">
+                    <span class="number_styling">4</span>
+                    <h3>Get a storybook</h3>
+                    <p>We make the final book and send it to you!</p>
+                </div>
+                <img src="/how/how4.png" alt="image" />
             </div>
         </div>
         <button class="main_button">Start your story</button>
@@ -25,6 +52,7 @@
 
     h2 {
         text-align: center;
+        margin-bottom: 4rem;
     }
 
     button {
@@ -50,7 +78,7 @@
         justify-content: space-between;
 
         img {
-            width: 300px;
+            width: 400px;
         }
 
         .content_body {
@@ -70,6 +98,35 @@
 
             p {
                 font-size: 20px;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    #how_section {
+        // background: #000;
+
+        .container_body {
+            .content_container {
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+
+                .content_body {
+                    order: 2;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+
+                    .number_styling {
+                        margin-bottom: 1.5rem;
+                    }
+                }
+
+                img {
+                    order: 1;
+                }
             }
         }
     }
