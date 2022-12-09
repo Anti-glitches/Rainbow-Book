@@ -4,9 +4,9 @@
 
         <div class="nav_links">
             <ul>
-                <!-- <li><a href="#">About</a></li> -->
-                <li><a href="#">Pricing</a></li>
-                <li><a href="#">How it works?</a></li>
+                <li><a href="#book_section">Example</a></li>
+                <li><a href="#how_section">How it works?</a></li>
+                <li><a href="#pricing_section">Pricing</a></li>
             </ul>
 
             <button class="main_button">Get started</button>

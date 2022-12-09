@@ -29,6 +29,7 @@
             <swiper-slide v-for="i in 8" :key="i">
                 <img :src="`/book/page${i}.png`" :alt="`page ${i}`" />
             </swiper-slide>
+            <p>Drag to read</p>
         </swiper>
     </div>
 </template>
@@ -61,6 +62,7 @@ export default {
         "before book";
     gap: 2rem;
     height: min-content;
+    align-items: center;
 
     h3 {
         grid-area: title;
@@ -73,6 +75,7 @@ export default {
             padding: 2rem;
             border-radius: 15px;
             width: auto;
+            height: max-content;
 
             .small_title {
                 font-family: var(--font1);
@@ -105,7 +108,7 @@ export default {
 
                 img {
                     width: 100px;
-                    height: 100%;
+                    height: fit-content;
                     justify-self: end;
                 }
             }
@@ -119,6 +122,16 @@ export default {
         width: auto;
         border-radius: 10px;
         margin: 0;
+        cursor: grab;
+
+        p {
+            padding: 5px 15px;
+            color: white;
+            font-weight: 700;
+            background: var(--primary-purple);
+            border-radius: 10px;
+            text-align: center;
+        }
     }
     .swiper-slide {
         text-align: center;
@@ -154,6 +167,7 @@ export default {
     #book_section {
         display: flex;
         flex-direction: column;
+        align-items: unset;
 
         h3 {
             text-align: center;
