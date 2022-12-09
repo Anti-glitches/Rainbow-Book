@@ -26,7 +26,7 @@
             </div>
         </div>
 
-        <swiper class="mySwiper">
+        <swiper class="mySwiper unselectable">
             <swiper-slide v-for="i in 8" :key="i">
                 <img :src="`/book/page${i}.png`" :alt="`page ${i}`" />
             </swiper-slide>
@@ -119,18 +119,6 @@ export default {
             }
         }
     }
-
-    // .book_right {
-    //     position: relative;
-
-    //     p.drag {
-    //         position: absolute;
-    //         left: 50%;
-    //         bottom: 50%;
-    //         transform: translateX(-50%) translateY(-50%);
-    //         z-index: 999;
-    //     }
-    // }
 
     .swiper {
         grid-area: book;

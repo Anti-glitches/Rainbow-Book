@@ -37,7 +37,7 @@
                 <li>
                     <i class="fa-solid fa-square-check"></i>
                     <span
-                        >Printable at Stables, Kinkos or a print shop near you
+                        >Printable at Staples, Kinkos or a print shop near you
                     </span>
                 </li>
                 <li>

@@ -81,10 +81,12 @@
     }
 }
 
+#footer_section {
+    background-image: url("/waves-bg.png");
+}
+
 @media (max-width: 768px) {
     #footer_section {
-        // background: aliceblue;
-
         .content {
             display: flex;
             flex-direction: column;
