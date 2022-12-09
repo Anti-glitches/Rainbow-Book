@@ -7,7 +7,7 @@ import Navbar from "../components/Navbar.vue";
         <navbar />
         <div class="hero">
             <div class="hero_left">
-                <h1>“I’m not a big sister anymore. Now I’m an author.”</h1>
+                <h1>“I’m not a big sister now. I’m an author.”</h1>
                 <p class="subhead">
                     Discover your child's boundless creativity and create a book
                     with them.
