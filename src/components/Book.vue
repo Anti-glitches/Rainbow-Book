@@ -1,9 +1,12 @@
 <template>
     <div id="book_section">
-        <h3>Read Maryam’s book</h3>
+        <h3>Maryam’s book</h3>
+        <!-- <p>
+            Maryam told this story (effortlessly) to her dad and he typed it in (on the left). Unicorny created a beautifully illustrated book from her story (right).
+        </p> -->
         <div class="book_left">
             <div class="aside_container">
-                <p class="small_title">What was inputted</p>
+                <p class="small_title">Maryam's story (as she told it)</p>
 
                 <p class="purple_container">One unicorn flied</p>
                 <p class="purple_container">She brakes her horn</p>
@@ -20,7 +23,7 @@
                 <p class="purple_container">The end</p>
 
                 <div class="footer">
-                    <p>Convert into a storybook</p>
+                    <p>Maryam's story got converted into this book</p>
                     <img src="/arrow-right.png" alt="" />
                 </div>
             </div>

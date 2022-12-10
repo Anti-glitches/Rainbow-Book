@@ -1,6 +1,6 @@
 <template>
     <nav>
-        <img src="/logo.png" alt="logo" />
+        <img src="/logo.svg" alt="logo" />
 
         <div class="nav_links">
             <ul>

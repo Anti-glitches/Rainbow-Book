@@ -24,15 +24,14 @@
                 <span class="price">$29.99</span>
             </div>
             <p>
-                Lorem ipsum dolor sit amet consectetur. Amet tincidunt convallis
-                pretium nulla in.
+                A one-of-a-kind book where your child is the author!
             </p>
 
             <p class="small_title">What you'll get:</p>
             <ul>
                 <li>
                     <i class="fa-solid fa-square-check"></i>
-                    <span>An amazing e-book illustrated using AI</span>
+                    <span>An amazing e-book (PDF) illustrated using AI</span>
                 </li>
                 <li>
                     <i class="fa-solid fa-square-check"></i>
@@ -42,11 +41,8 @@
                 </li>
                 <li>
                     <i class="fa-solid fa-square-check"></i>
-                    <span>Lorem ipsum dolor sit amet consectetur</span>
-                </li>
-                <li>
-                    <i class="fa-solid fa-square-check"></i>
-                    <span>Lorem ipsum dolor sit amet consectetur</span>
+                    <span>Unique, one of a kind book
+                    </span>
                 </li>
             </ul>
 
@@ -61,35 +57,25 @@
                 <span class="price">$99.99</span>
             </div>
             <p>
-                Lorem ipsum dolor sit amet consectetur. Amet tincidunt convallis
-                pretium nulla in.
+                Preserve this special moment with a physical book you can read when your child grows up. And right now at bed time!
             </p>
 
             <p class="small_title">What you'll get:</p>
             <ul>
                 <li>
                     <i class="fa-solid fa-square-check"></i>
-                    <span
-                        >An amazing physical book you can read at bedtime!
+                    <span>An amazing physical book you can read at bedtime!
                     </span>
                 </li>
                 <li>
                     <i class="fa-solid fa-square-check"></i>
-                    <span>Lorem ipsum dolor sit amet consectetur</span>
-                </li>
-                <li>
-                    <i class="fa-solid fa-square-check"></i>
-                    <span>Lorem ipsum dolor sit amet consectetur</span>
-                </li>
-                <li>
-                    <i class="fa-solid fa-square-check"></i>
-                    <span>Lorem ipsum dolor sit amet consectetur</span>
+                    <span>Unique, one of a kind book
+                    </span>
                 </li>
             </ul>
 
             <div class="pricing_footer">
-                <a href="#">View detail example</a>
-                <button class="main_button">Let's start</button>
+                <button class="main_button" disabled>Let's start<br/>(coming soon)</button>
             </div>
         </div>
     </div>
@@ -171,13 +157,18 @@
             button {
                 font-size: 20px;
             }
+            :disabled {
+                background: #ccc;
+                color: #666;
+                cursor: not-allowed;
+            }
         }
     }
 
-    .pricing_physical {
+    .pricing_digital {
         background: var(--primary-purple);
         color: white;
-        grid-area: physical;
+        grid-area: digital;
 
         a {
             color: white;
@@ -196,9 +187,9 @@
         }
     }
 
-    .pricing_digital {
+    .pricing_physical {
         background: var(--light);
-        grid-area: digital;
+        grid-area: physical;
     }
 
     .why_info {

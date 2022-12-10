@@ -1,6 +1,6 @@
 <template>
     <footer id="footer_section">
-        <div class="content">
+        <!-- <div class="content">
             <div class="content-body">
                 <h4>Join our newsletter</h4>
                 <p>
@@ -12,13 +12,13 @@
                 <input type="text" placeholder="Your Email" />
                 <button class="main_button">Send</button>
             </div>
-        </div>
+        </div> -->
         <div class="footer_bottom">
-            <img src="/logo.png" alt="logo" />
+            <img src="/logo.svg" alt="logo" />
             <div class="footer_links">
-                <a href="#">Terms of Service</a>
-                <a href="#">Refund Policy</a>
-                <p>Copyright © 2022, Powered by Unicorn Book</p>
+                <!-- <a href="#">Terms of Service</a> -->
+                <!-- <a href="#">Refund Policy</a> -->
+                <p>Copyright © by Unicorny.ai</p>
             </div>
         </div>
     </footer>
@@ -64,7 +64,8 @@
 }
 
 .footer_bottom {
-    margin-top: 100px;
+    margin-top: 50px;
+    margin-bottom: 150px;
     display: flex;
     justify-content: space-between;
 
@@ -82,6 +83,7 @@
 }
 
 #footer_section {
+    background-position: bottom;
     background-image: url("/waves-bg.png");
 }
 
