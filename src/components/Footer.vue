@@ -18,7 +18,7 @@
             <div class="footer_links">
                 <!-- <a href="#">Terms of Service</a> -->
                 <!-- <a href="#">Refund Policy</a> -->
-                <p>Copyright © by Unicorny.ai</p>
+                <p>Copyright © by CommerceOwl Inc.</p>
             </div>
         </div>
     </footer>
