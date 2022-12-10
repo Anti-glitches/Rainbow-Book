@@ -2,6 +2,7 @@
 import Navbar from "../components/Navbar.vue";
 </script>
 
+
 <template>
     <div id="hero_section">
         <navbar />
@@ -12,7 +13,7 @@ import Navbar from "../components/Navbar.vue";
                     Discover your child's boundless creativity and create a book
                     with them.
                 </p>
-                <button class="main_button">Create your book</button>
+                <a href="https://sfd1jmu87ts.typeform.com/to/YsFn0h1h" class="main_button">Create your book</a>
             </div>
 
             <img src="/hero-img.png" alt="hero image" />

@@ -1,3 +1,15 @@
+<script>
+export default {
+
+
+    methods: {
+        redirect(event) {
+            window.location.href = 'https://sfd1jmu87ts.typeform.com/to/YsFn0h1h';
+        }
+    }
+};
+</script>
+
 <template>
     <div id="pricing_section">
         <div class="title">
@@ -48,7 +60,7 @@
 
             <div class="pricing_footer">
                 <a href="#">View detail example</a>
-                <button class="main_button">Let's start</button>
+                <button  @click="redirect" class="main_button">Let's start</button>
             </div>
         </div>
         <div class="card card_pricing pricing_physical">

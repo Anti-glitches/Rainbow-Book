@@ -1,3 +1,15 @@
+<script>
+export default {
+
+
+    methods: {
+        redirect(event) {
+            window.location.href = 'https://sfd1jmu87ts.typeform.com/to/YsFn0h1h';
+        }
+    }
+}
+</script>
+
 <template>
     <div id="how_section">
         <h2>How it works</h2>
@@ -41,7 +53,7 @@
                 <img src="/how/how4.png" alt="image" />
             </div>
         </div>
-        <button class="main_button">Start your story</button>
+        <button @click="redirect" class="main_button">Start your story</button>
     </div>
 </template>
 
@@ -60,6 +72,7 @@
         margin-top: 40px;
     }
 }
+
 .container_body {
     display: flex;
     flex-direction: column;

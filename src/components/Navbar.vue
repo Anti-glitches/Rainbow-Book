@@ -1,3 +1,15 @@
+<script>
+export default {
+
+
+    methods: {
+        redirect(event) {
+            window.location.href = 'https://sfd1jmu87ts.typeform.com/to/YsFn0h1h';
+        }
+    }
+};
+</script>
+
 <template>
     <nav>
         <img src="/logo.svg" alt="logo" />
@@ -9,14 +21,12 @@
                 <li><a href="#pricing_section">Pricing</a></li>
             </ul>
 
-            <button class="main_button">Get started</button>
+            <button @click="redirect" class="main_button">Get started</button>
         </div>
     </nav>
 </template>
 
-<script>
-export default {};
-</script>
+
 
 <style lang="scss" scoped>
 nav {
