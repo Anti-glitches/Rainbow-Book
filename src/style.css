@@ -7,11 +7,9 @@
     --font1: 'Source Serif Pro',
         serif;
     --font2: 'Nunito', sans-serif;
-    --sm: 576px;
-    --md: 768px;
-    --lg: 992px;
-    --xl:1200px;
-    --xxl: 1400px;
+
+    /* Changes the swiper theme color to purple */
+    --swiper-theme-color: var(--secondary-purple) !important;
 
     box-sizing: border-box;
 }
@@ -69,6 +67,15 @@ h4{
     letter-spacing: 2px;
     cursor: pointer;
     text-align: center;
+}
+
+/* Swiper progress bar move to bottom -> Remove this css to put it back to the top*/
+.swiper-horizontal>.swiper-pagination-progressbar,
+.swiper-pagination-progressbar.swiper-pagination-horizontal,
+.swiper-pagination-progressbar.swiper-pagination-vertical.swiper-pagination-progressbar-opposite,
+.swiper-vertical>.swiper-pagination-progressbar.swiper-pagination-progressbar-opposite {
+    top: unset !important;
+    bottom: 0 !important;
 }
 
 .unselectable {

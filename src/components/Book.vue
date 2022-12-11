@@ -29,11 +29,19 @@
             </div>
         </div>
 
-        <swiper class="mySwiper unselectable">
+        <swiper
+            class="mySwiper unselectable"
+            :pagination="{
+                type: 'progressbar',
+            }"
+            :navigation="true"
+            :effect="'cards'"
+            :grabCursor="true"
+            :modules="modules"
+        >
             <swiper-slide v-for="i in 8" :key="i">
                 <img :src="`/book/page${i}.png`" :alt="`page ${i}`" />
             </swiper-slide>
-            <p class="drag">Drag to read</p>
         </swiper>
     </div>
 </template>
@@ -43,8 +51,14 @@ import { Swiper, SwiperSlide } from "swiper/vue";
 
 // Import Swiper styles
 import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+import "swiper/css/effect-cards";
 
-// import "./style.css";
+import "../style.css";
+
+// import required modules
+import { Pagination, Navigation, EffectCards } from "swiper";
 
 export default {
     components: {
@@ -52,7 +66,9 @@ export default {
         SwiperSlide,
     },
     setup() {
-        return {};
+        return {
+            modules: [Pagination, Navigation, EffectCards],
+        };
     },
 };
 </script>
@@ -126,31 +142,24 @@ export default {
     .swiper {
         grid-area: book;
         // width: 100%;
-        height: fit-content;
-        width: auto;
+        // height: fit-content;
+        // width: auto;
+        // max-height: 100%;
+        // max-width: 100%;
+
+        max-width: 100vw;
+        width: 100%;
+        overflow: hidden;
+
         border-radius: 10px;
         margin: 0;
         cursor: grab;
-        position: relative;
-
-        .drag {
-            position: absolute;
-            z-index: 999;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            margin: 0;
-            color: white;
-            background: var(--secondary-purple);
-            padding: 5px 20px;
-            border-radius: 10px;
-            opacity: 0.75;
-        }
     }
     .swiper-slide {
         text-align: center;
         font-size: 18px;
-        background: #fff;
+        background: #fef9f3;
+        max-height: 100%;
 
         /* Center slide text vertically */
         display: -webkit-box;
@@ -169,11 +178,10 @@ export default {
 
     .swiper-slide img {
         display: block;
-        // width: 100vw;
-        // height: auto;
-        width: 100%;
+        max-width: 100%;
         height: auto;
         object-fit: cover;
+        border-radius: 5px;
     }
 }
 

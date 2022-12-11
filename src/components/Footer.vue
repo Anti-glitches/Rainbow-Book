@@ -89,18 +89,10 @@
     position: absolute;
     left: 0;
     right: 0;
-    // bottom: 0;
-    // z-index: -999;
-    // bottom: 40px;
-    z-index: -99;
-    margin-top: -40vh;
+    z-index: -999;
+    margin-top: -28vw; /* This works suprisingly well because it adjust based on viewport */
     width: 100%;
 }
-
-// #footer_section {
-//     background-position: bottom;
-//     background-image: url("/waves-bg.png");
-// }
 
 @media (max-width: 768px) {
     #footer_section {
@@ -114,7 +106,6 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            // margin-bottom: 100px;
 
             img {
                 // margin-bottom: 2rem;
@@ -125,10 +116,6 @@
             .footer_links {
                 text-align: center;
             }
-        }
-
-        #waves-bg {
-            margin-top: -100px;
         }
     }
 }
