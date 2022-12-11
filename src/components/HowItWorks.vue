@@ -1,13 +1,12 @@
 <script>
 export default {
-
-
     methods: {
         redirect(event) {
-            window.location.href = 'https://sfd1jmu87ts.typeform.com/to/YsFn0h1h';
-        }
-    }
-}
+            window.location.href =
+                "https://sfd1jmu87ts.typeform.com/to/YsFn0h1h";
+        },
+    },
+};
 </script>
 
 <template>
@@ -139,6 +138,7 @@ export default {
 
                 img {
                     order: 1;
+                    width: 300px;
                 }
             }
         }

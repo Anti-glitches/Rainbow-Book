@@ -25,4 +25,10 @@ import Pricing from "./components/Pricing.vue";
     max-width: 1400px;
     margin: 0 auto;
 }
+
+@media (max-width: 768px) {
+    #app {
+        gap: 100px;
+    }
+}
 </style>

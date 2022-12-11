@@ -21,6 +21,8 @@
                 <p>Copyright © by CommerceOwl Inc.</p>
             </div>
         </div>
+
+        <img id="waves-bg" src="/waves-bg.png" alt="bg image" />
     </footer>
 </template>
 <style lang="scss" scoped>
@@ -65,9 +67,10 @@
 
 .footer_bottom {
     margin-top: 50px;
-    margin-bottom: 150px;
+    // margin-bottom: 150px;
     display: flex;
     justify-content: space-between;
+    align-items: flex-end;
 
     img {
         height: min-content;
@@ -82,10 +85,22 @@
     }
 }
 
-#footer_section {
-    background-position: bottom;
-    background-image: url("/waves-bg.png");
+#waves-bg {
+    position: absolute;
+    left: 0;
+    right: 0;
+    // bottom: 0;
+    // z-index: -999;
+    // bottom: 40px;
+    z-index: -99;
+    margin-top: -40vh;
+    width: 100%;
 }
+
+// #footer_section {
+//     background-position: bottom;
+//     background-image: url("/waves-bg.png");
+// }
 
 @media (max-width: 768px) {
     #footer_section {
@@ -99,9 +114,10 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            // margin-bottom: 100px;
 
             img {
-                margin-bottom: 2rem;
+                // margin-bottom: 2rem;
                 height: 100%;
                 width: min-content;
             }
@@ -109,6 +125,10 @@
             .footer_links {
                 text-align: center;
             }
+        }
+
+        #waves-bg {
+            margin-top: -100px;
         }
     }
 }
