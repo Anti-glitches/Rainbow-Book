@@ -33,7 +33,7 @@ export default {
         <div class="card card_pricing pricing_digital">
             <div class="pricing_title">
                 <h4>Digital</h4>
-                <span class="price">$29.99</span>
+                <span class="price">$19.00</span>
             </div>
             <p>
                 A one-of-a-kind book where your child is the author!
