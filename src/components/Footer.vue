@@ -22,7 +22,12 @@
             </div>
         </div>
 
-        <img id="waves-bg" src="/waves-bg.png" alt="bg image" />
+        <img
+            id="waves-bg"
+            class="unselectable"
+            src="/waves-bg.png"
+            alt="bg image"
+        />
     </footer>
 </template>
 <style lang="scss" scoped>
