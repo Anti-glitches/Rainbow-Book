@@ -80,10 +80,11 @@ export default {
     grid-template-areas:
         "title title"
         "before book";
-    gap: 2rem;
+    gap: 5rem;
     height: min-content;
     align-items: center;
     position: relative;
+    overflow: hidden;
 
     h3 {
         grid-area: title;
@@ -91,6 +92,7 @@ export default {
 
     .book_left {
         grid-area: before;
+        z-index: 999;
 
         .aside_container {
             background: white;
@@ -147,9 +149,10 @@ export default {
         // max-height: 100%;
         // max-width: 100%;
 
-        max-width: 100vw;
-        width: 100%;
-        overflow: hidden;
+        max-width: 50vw;
+        // width: 100%;
+        // overflow: hidden;
+        width: fit-content;
 
         border-radius: 10px;
         margin: 0;
@@ -189,10 +192,18 @@ export default {
     #book_section {
         display: flex;
         flex-direction: column;
-        align-items: unset;
+        align-items: center;
+        // justify-content: center;
+        overflow: hidden;
 
         h3 {
             text-align: center;
+        }
+
+        .swiper {
+            max-width: 72vw;
+
+            // padding: 0 10vw;
         }
 
         .book_left {
@@ -205,6 +216,14 @@ export default {
                     }
                 }
             }
+        }
+    }
+}
+
+@media (min-width: 1400px) {
+    #book_section {
+        .swiper {
+            max-width: 750px;
         }
     }
 }
