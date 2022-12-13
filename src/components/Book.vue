@@ -84,6 +84,7 @@ export default {
     height: min-content;
     align-items: center;
     position: relative;
+    overflow: hidden;
 
     h3 {
         grid-area: title;
