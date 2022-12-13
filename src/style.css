@@ -9,7 +9,8 @@
     --font2: 'Nunito', sans-serif;
 
     /* Changes the swiper theme color to purple */
-    --swiper-theme-color: var(--secondary-purple) !important;
+    /* --swiper-theme-color: var(--secondary-purple) !important; */
+    --swiper-theme-color: #00abb7 !important;
 
     box-sizing: border-box;
 }

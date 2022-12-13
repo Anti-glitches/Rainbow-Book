@@ -84,7 +84,6 @@ export default {
     height: min-content;
     align-items: center;
     position: relative;
-    overflow: hidden;
 
     h3 {
         grid-area: title;
@@ -93,6 +92,7 @@ export default {
     .book_left {
         grid-area: before;
         z-index: 999;
+        padding-right: 8px;
 
         .aside_container {
             background: white;
