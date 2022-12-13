@@ -94,6 +94,7 @@ export default {
         grid-area: before;
         z-index: 999;
         padding-right: 8px;
+        padding-bottom: 8px;
 
         .aside_container {
             background: white;
